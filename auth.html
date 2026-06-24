@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login dan Register | Jelajah Dunia Bersama Albert</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="navbar__logo">Jelajah Dunia Bersama <span>Albert</span></div>
+
+        <ul class="navbar__links">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="destinasi.html">Destinasi</a></li>
+            <li><a href="paket.html">Paket</a></li>
+            <li><a href="artikel.html">Artikel</a></li>
+            <li><a href="tips.html">Tips</a></li>
+            <li><a href="galeri.html">Galeri</a></li>
+            <li><a href="multimedia.html">Multimedia</a></li>
+        </ul>
+
+        <div class="navbar__auth">
+            <a href="#login" class="btn btn--ghost btn--sm" data-auth-switch="login">Login</a>
+            <a href="#register" class="btn btn--primary btn--sm" data-auth-switch="register">Register</a>
+        </div>
+    </nav>
+
+    <section class="section auth-page">
+        <div class="auth-layout">
+            <div class="auth-card">
+                <div class="auth-tabs">
+                    <button type="button" class="auth-tab active" data-auth-switch="login">Login</button>
+                    <button type="button" class="auth-tab" data-auth-switch="register">Register</button>
+                </div>
+
+                <div class="auth-message" id="authMessage">
+                    Silakan login jika sudah punya akun, atau register dulu kalau belum.
+                </div>
+
+                <form class="auth-form active" id="loginForm">
+                    <h2>Login Akun</h2>
+
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" placeholder="contoh@email.com" required>
+
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" placeholder="Masukkan password" required>
+
+                    <button type="submit" class="btn btn--primary auth-submit">
+                        <i class="fa-solid fa-right-to-bracket"></i> Login
+                    </button>
+                </form>
+
+                <form class="auth-form" id="registerForm" hidden>
+                    <h2>Buat Akun Baru</h2>
+
+                    <label for="registerName">Nama Lengkap</label>
+                    <input type="text" id="registerName" placeholder="Masukkan nama lengkap" required>
+
+                    <label for="registerEmail">Email</label>
+                    <input type="email" id="registerEmail" placeholder="Masukkan email aktif" required>
+
+                    <label for="registerPassword">Password</label>
+                    <input type="password" id="registerPassword" placeholder="Minimal 6 karakter" required>
+
+                    <label for="registerConfirm">Konfirmasi Password</label>
+                    <input type="password" id="registerConfirm" placeholder="Ulangi password" required>
+
+                    <button type="submit" class="btn btn--primary auth-submit">
+                        <i class="fa-solid fa-user-plus"></i> Register
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__grid">
+            <div class="footer__brand">
+                <h3>Jelajah Dunia Bersama Albert</h3>
+                <p>
+                    Portal informasi perjalanan wisata terpercaya di Indonesia sejak 2020.
+                    Kami membantu jutaan wisatawan menemukan destinasi impian, paket liburan
+                    terbaik, dan pengalaman perjalanan yang tak terlupakan di seluruh Nusantara.
+                </p>
+            </div>
+
+            <div class="footer__col">
+                <h4>Navigasi</h4>
+                <ul>
+                    <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Beranda</a></li>
+                    <li><a href="destinasi.html"><i class="fa-solid fa-chevron-right"></i> Destinasi</a></li>
+                    <li><a href="paket.html"><i class="fa-solid fa-chevron-right"></i> Paket Wisata</a></li>
+                    <li><a href="artikel.html"><i class="fa-solid fa-chevron-right"></i> Artikel</a></li>
+                    <li><a href="tips.html"><i class="fa-solid fa-chevron-right"></i> Tips</a></li>
+                    <li><a href="multimedia.html"><i class="fa-solid fa-chevron-right"></i> Multimedia</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__col">
+                <h4>Menu Akun</h4>
+                <ul>
+                    <li><a href="#login"><i class="fa-solid fa-chevron-right"></i> Login</a></li>
+                    <li><a href="#register"><i class="fa-solid fa-chevron-right"></i> Register</a></li>
+                    <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Kembali ke Beranda</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__col">
+                <h4>Hubungi Kami</h4>
+                <ul>
+                    <li><a href="#"><i class="fa-solid fa-phone"></i> +62 21 1234 5678</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <p>&copy; 2026 Wisata Indonesia. Semua hak dilindungi.<i class="fa-solid fa-heart"
+                    style="color:var(--primary)"></i></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

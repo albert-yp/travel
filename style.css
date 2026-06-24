@@ -121,6 +121,13 @@ img { display: block; max-width: 100%; height: auto; object-fit: cover; }
     border-bottom-color: var(--primary);
 }
 
+.navbar__auth {
+    display: flex;
+    align-items: center;
+    gap: .65rem;
+    flex-shrink: 0;
+}
+
 
 .btn {
     display: inline-flex;
@@ -160,6 +167,11 @@ img { display: block; max-width: 100%; height: auto; object-fit: cover; }
 .btn--lg {
     padding: .8rem 2.2rem;                  
     font-size: 1rem;                        
+}
+
+.btn--sm {
+    padding: .48rem 1rem;
+    font-size: .8rem;
 }
 
 
@@ -983,6 +995,123 @@ img { display: block; max-width: 100%; height: auto; object-fit: cover; }
 }
 
 
+.auth-page {
+    padding-top: 48px;
+}
+
+.auth-layout {
+    max-width: 560px;
+    margin: 0 auto;
+}
+
+.auth-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    min-width: 0;
+    padding: 1.8rem;
+}
+
+.auth-message {
+    overflow-wrap: anywhere;
+}
+
+.auth-tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .8rem;
+    margin-bottom: 1rem;
+}
+
+.auth-tab {
+    border: 1px solid var(--border);
+    background-color: var(--bg-muted);
+    color: var(--text-soft);
+    border-radius: var(--radius-full);
+    padding: .85rem 1rem;
+    font-family: var(--font-main);
+    font-size: .88rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color var(--transition), color var(--transition),
+                transform var(--transition), box-shadow var(--transition);
+}
+
+.auth-tab.active {
+    background-color: var(--primary);
+    color: #fff;
+    box-shadow: 0 8px 20px var(--primary-glow);
+}
+
+.auth-form {
+    display: none;
+}
+
+.auth-form.active {
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+}
+
+.auth-form h2 {
+    font-size: 1.35rem;
+    color: var(--dark);
+    margin-bottom: .35rem;
+}
+
+.auth-form label {
+    font-size: .85rem;
+    font-weight: 600;
+    color: var(--text-soft);
+}
+
+.auth-form input {
+    width: 100%;
+    border: 1px solid var(--border);
+    background-color: var(--bg-input);
+    border-radius: var(--radius-sm);
+    padding: .9rem 1rem;
+    font-family: var(--font-main);
+    font-size: .9rem;
+    color: var(--text);
+    outline: none;
+    transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.auth-form input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px var(--primary-glow);
+}
+
+.auth-submit {
+    justify-content: center;
+    margin-top: .4rem;
+}
+
+.auth-message {
+    margin-bottom: 1.2rem;
+    border-radius: var(--radius-sm);
+    background-color: var(--bg-muted);
+    border: 1px solid var(--border);
+    color: var(--text-soft);
+    padding: .9rem 1rem;
+    font-size: .84rem;
+}
+
+.auth-message.success {
+    background-color: #ecfdf3;
+    border-color: #86efac;
+    color: #166534;
+}
+
+.auth-message.error {
+    background-color: #fef2f2;
+    border-color: #fca5a5;
+    color: #b91c1c;
+}
+
+
 .footer {
     background-color: var(--dark);      
     color: rgba(255,255,255,.65);       
@@ -1103,8 +1232,25 @@ img { display: block; max-width: 100%; height: auto; object-fit: cover; }
 }
 
 @media (max-width: 480px) {
-    .navbar { padding: 0 4%; height: 60px; }
-    .navbar__logo { font-size: 1.2rem; }
+    .navbar {
+        padding: 12px 4%;
+        height: auto;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: .7rem;
+    }
+    .navbar__logo {
+        width: 100%;
+        font-size: 1rem;
+        line-height: 1.2;
+        min-width: 0;
+        overflow-wrap: anywhere;
+    }
+    .navbar__auth {
+        width: 100%;
+        justify-content: flex-start;
+        gap: .45rem;
+    }
 
     .hero { padding: 36px 4% 48px; gap: 2rem; }
     .hero__title { font-size: 1.7rem; }
@@ -1128,6 +1274,10 @@ img { display: block; max-width: 100%; height: auto; object-fit: cover; }
     .dest-card--tall { min-height: 200px; }
 
     .btn--lg { padding: .7rem 1.6rem; font-size: .9rem; }
+    .btn--sm { padding: .42rem .8rem; font-size: .74rem; }
+    .auth-card { padding: 1.35rem; }
+    .auth-tabs { gap: .55rem; }
+    .auth-tab { padding: .7rem .8rem; }
     .footer { padding: 48px 4% 24px; }
 }
 
