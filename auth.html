@@ -27,8 +27,8 @@
         </ul>
 
         <div class="navbar__auth">
-            <a href="#login" class="btn btn--ghost btn--sm" data-auth-switch="login">Login</a>
-            <a href="#register" class="btn btn--primary btn--sm" data-auth-switch="register">Register</a>
+            <a href="auth.html#login" class="btn btn--ghost btn--sm">Login</a>
+            <a href="auth.html#register" class="btn btn--primary btn--sm">Register</a>
         </div>
     </nav>
 
@@ -51,7 +51,13 @@
                     <input type="email" id="loginEmail" placeholder="contoh@email.com" required>
 
                     <label for="loginPassword">Password</label>
-                    <input type="password" id="loginPassword" placeholder="Masukkan password" required>
+                    <div class="password-group">
+                        <input type="password" id="loginPassword" placeholder="Masukkan password" required>
+                        <button type="button" class="password-toggle" data-password-toggle="loginPassword"
+                            aria-label="Tampilkan password">
+                            <i class="fa-regular fa-eye"></i>
+                        </button>
+                    </div>
 
                     <button type="submit" class="btn btn--primary auth-submit">
                         <i class="fa-solid fa-right-to-bracket"></i> Login
@@ -68,10 +74,22 @@
                     <input type="email" id="registerEmail" placeholder="Masukkan email aktif" required>
 
                     <label for="registerPassword">Password</label>
-                    <input type="password" id="registerPassword" placeholder="Minimal 6 karakter" required>
+                    <div class="password-group">
+                        <input type="password" id="registerPassword" placeholder="Minimal 6 karakter" required>
+                        <button type="button" class="password-toggle" data-password-toggle="registerPassword"
+                            aria-label="Tampilkan password">
+                            <i class="fa-regular fa-eye"></i>
+                        </button>
+                    </div>
 
                     <label for="registerConfirm">Konfirmasi Password</label>
-                    <input type="password" id="registerConfirm" placeholder="Ulangi password" required>
+                    <div class="password-group">
+                        <input type="password" id="registerConfirm" placeholder="Ulangi password" required>
+                        <button type="button" class="password-toggle" data-password-toggle="registerConfirm"
+                            aria-label="Tampilkan password">
+                            <i class="fa-regular fa-eye"></i>
+                        </button>
+                    </div>
 
                     <button type="submit" class="btn btn--primary auth-submit">
                         <i class="fa-solid fa-user-plus"></i> Register

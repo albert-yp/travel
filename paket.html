@@ -67,7 +67,8 @@
                         <div class="package-card__price">Rp 2.500.000 <span class="package-card__per">/ orang</span>
                         </div>
                     </div>
-                    <a href="#" class="btn btn--primary">Pesan</a>
+                    <a href="#booking" class="btn btn--primary booking-trigger"
+                        data-booking-package="Paket Bali 3 Hari 2 Malam">Pesan</a>
                 </div>
             </div>
 
@@ -91,7 +92,8 @@
                         <div class="package-card__price">Rp 4.500.000 <span class="package-card__per">/ orang</span>
                         </div>
                     </div>
-                    <a href="#" class="btn btn--primary">Pesan</a>
+                    <a href="#booking" class="btn btn--primary booking-trigger"
+                        data-booking-package="Paket Labuan Bajo 4 Hari 3 Malam">Pesan</a>
                 </div>
             </div>
 
@@ -114,7 +116,8 @@
                         <div class="package-card__price">Rp 2.200.000 <span class="package-card__per">/ orang</span>
                         </div>
                     </div>
-                    <a href="#" class="btn btn--primary">Pesan</a>
+                    <a href="#booking" class="btn btn--primary booking-trigger"
+                        data-booking-package="Paket Danau Toba 3 Hari 2 Malam">Pesan</a>
                 </div>
             </div>
 
@@ -137,7 +140,8 @@
                         <div class="package-card__price">Rp 1.750.000 <span class="package-card__per">/ orang</span>
                         </div>
                     </div>
-                    <a href="#" class="btn btn--primary">Pesan</a>
+                    <a href="#booking" class="btn btn--primary booking-trigger"
+                        data-booking-package="Paket Yogyakarta 2 Hari 1 Malam">Pesan</a>
                 </div>
             </div>
 
@@ -160,7 +164,8 @@
                         <div class="package-card__price">Rp 7.800.000 <span class="package-card__per">/ orang</span>
                         </div>
                     </div>
-                    <a href="#" class="btn btn--primary">Pesan</a>
+                    <a href="#booking" class="btn btn--primary booking-trigger"
+                        data-booking-package="Paket Raja Ampat 5 Hari 4 Malam">Pesan</a>
                 </div>
             </div>
 
@@ -183,9 +188,70 @@
                         <div class="package-card__price">Rp 1.350.000 <span class="package-card__per">/ orang</span>
                         </div>
                     </div>
-                    <a href="#" class="btn btn--primary">Pesan</a>
+                    <a href="#booking" class="btn btn--primary booking-trigger"
+                        data-booking-package="Paket Bromo Sunrise 2 Hari 1 Malam">Pesan</a>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section class="section" id="booking">
+        <div class="section__header">
+            <h2>Form Booking Paket Wisata</h2>
+            <p>Isi data sederhana berikut untuk menyimpan pemesanan paket wisata ke browser Anda.</p>
+        </div>
+
+        <div class="booking-card">
+            <div class="booking-message" id="bookingMessage">
+                Isi form booking berikut. Jika sudah login, nama dan email akan terisi otomatis.
+            </div>
+
+            <form class="booking-form" id="bookingForm">
+                <div class="booking-form__grid">
+                    <div class="booking-field">
+                        <label for="bookingName">Nama Lengkap</label>
+                        <input type="text" id="bookingName" placeholder="Masukkan nama lengkap" required>
+                    </div>
+
+                    <div class="booking-field">
+                        <label for="bookingEmail">Email</label>
+                        <input type="email" id="bookingEmail" placeholder="Masukkan email aktif" required>
+                    </div>
+
+                    <div class="booking-field">
+                        <label for="bookingPackage">Pilih Paket</label>
+                        <select id="bookingPackage" required>
+                            <option value="">Pilih paket wisata</option>
+                            <option value="Paket Bali 3 Hari 2 Malam">Paket Bali 3 Hari 2 Malam</option>
+                            <option value="Paket Labuan Bajo 4 Hari 3 Malam">Paket Labuan Bajo 4 Hari 3 Malam</option>
+                            <option value="Paket Danau Toba 3 Hari 2 Malam">Paket Danau Toba 3 Hari 2 Malam</option>
+                            <option value="Paket Yogyakarta 2 Hari 1 Malam">Paket Yogyakarta 2 Hari 1 Malam</option>
+                            <option value="Paket Raja Ampat 5 Hari 4 Malam">Paket Raja Ampat 5 Hari 4 Malam</option>
+                            <option value="Paket Bromo Sunrise 2 Hari 1 Malam">Paket Bromo Sunrise 2 Hari 1 Malam</option>
+                        </select>
+                    </div>
+
+                    <div class="booking-field">
+                        <label for="bookingDate">Tanggal Berangkat</label>
+                        <input type="date" id="bookingDate" required>
+                    </div>
+
+                    <div class="booking-field">
+                        <label for="bookingPeople">Jumlah Orang</label>
+                        <input type="number" id="bookingPeople" min="1" value="2" required>
+                    </div>
+
+                    <div class="booking-field booking-field--full">
+                        <label for="bookingNote">Catatan Tambahan</label>
+                        <textarea id="bookingNote" rows="4"
+                            placeholder="Contoh: ingin kamar twin bed, tambahan city tour, atau request khusus lainnya"></textarea>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn--primary booking-submit">
+                    <i class="fa-solid fa-paper-plane"></i> Kirim Booking
+                </button>
+            </form>
         </div>
     </section>
 
@@ -240,6 +306,7 @@
         </div>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 
 </html>
